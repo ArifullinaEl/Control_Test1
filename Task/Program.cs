@@ -44,19 +44,19 @@ void PrintArray(string[] array)
 
 
 int length = InputNumberWithMessage("Введите количество элементов массива: ");
-string[] nunbers = new string[length];
+string[] words = new string[length];
 
 
-FillArray(nunbers);
+FillArray(words);
 System.Console.WriteLine();
 System.Console.WriteLine("Исходный массив:");
-PrintArray(nunbers);
+PrintArray(words);
 
 
 int n = 0;
-for (int i = 0; i < nunbers.Length; i++)
+for (int i = 0; i < words.Length; i++)
 {
-    if (nunbers[i].Length <= 3)
+    if (words[i].Length <= 3)
         n++;
 }
 
@@ -74,11 +74,11 @@ else
     string[] resultArray = new string[n];
 
     int j = 0;
-    for (int i = 0; i < nunbers.Length; i++)
+    for (int i = 0; i < words.Length; i++)
     {
-        if (nunbers[i].Length <= 3)
+        if (words[i].Length <= 3)
         {
-            resultArray[j] = nunbers[i];
+            resultArray[j] = words[i];
             j++;
         }
     }
